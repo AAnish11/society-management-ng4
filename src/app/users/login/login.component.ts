@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit {
   submitLogin() {    
     this.serverService.login(this.loginForm.value).subscribe(
       (response) =>{
-        const data = response.json();                
+        const data = response.json();  
+        window.localStorage.setItem('loginAuthToken', data.token);                      
         this.loginForm.reset();
         alert(data.msg);
       },
