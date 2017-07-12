@@ -1,0 +1,75 @@
+<form (ngSubmit)="submitForm()" #signupForm="ngForm">
+  First Name : <input 
+      type="text" 
+      ngModel 
+      id="first_name"
+      required
+      name="first_name">
+  <br/>
+  Last Name :  <input 
+      type="text" 
+      ngModel 
+      id="last_name"
+      required
+      name="last_name">
+  <br/>
+  Email : <input 
+      type="email" 
+      ngModel 
+      id="email"
+      required
+      name="email">
+  <br/>
+  Password : <input 
+      type="password" 
+      ngModel 
+      id="password"
+      required
+      name="password">
+  <br/>
+  Confirm Password : <input 
+      type="password" 
+      ngModel 
+      id="cpassword"
+      required
+      name="cpassword">
+
+  <br/>
+  Birth Date : <input 
+      type="date" 
+      ngModel 
+      id="bdate"
+      name="bdate">
+<br/>
+  Flat Purchase Date : <input 
+      type="date" 
+      ngModel 
+      id="profile"
+      name="profile">
+  <br/>
+  Profile Pic : <input 
+      type="file" 
+      ngModel 
+      id="profile"
+      name="profile">
+  <br/>
+  Mobile Number : <input 
+      type="text" 
+      ngModel 
+      maxLength="12"
+      id="profile"
+      name="profile">
+  <br/>
+  Flat block : <select ngModel name="fblock" >
+      <option  *ngFor="let block of fBlocks" [value]="block">{{block}}</option>
+  </select>
+  <br/>
+  <br/>
+  Flat Number : <select ngModel name="fnumber" >
+      <option  *ngFor="let number of fNumbers" [value]="number"> {{number}} </option>
+  </select>
+<br/>
+  Agree to terms and condition : <input type="checkbox" ngModel required name="termcondition">
+  <br/>   
+  <input type="submit" value="Submit" [disabled]="!signupForm.valid">
+</form>

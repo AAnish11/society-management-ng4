@@ -1,0 +1,17 @@
+<form (ngSubmit)="submitLogin()" #loginForm="ngForm">
+Email : <input 
+    type="email" 
+    ngModel 
+    id="email"
+    required
+    name="email">
+<br/>
+Password : <input 
+    type="password" 
+    ngModel 
+    id="password"
+    required
+    name="password">
+<br/>
+<input type="submit" [disabled]="!loginForm.valid" value="submit">
+</form>

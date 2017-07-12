@@ -1,0 +1,21 @@
+<form (ngSubmit)="submitVehicle(vehicleForm)" #vehicleForm="ngForm">
+Type : <select ngModel name="type" required>
+    <option *ngFor="let type of vehicleTypes">{{type}}</option>
+  </select>
+<br/>
+Vehicle Registration Number : <input 
+    type="text" 
+    ngModel 
+    id="regNumber"    
+    name="regNumber">
+<br/>
+Vehicle Photo URL : <input 
+    type="text" 
+    ngModel 
+    id="photo"    
+    name="photo">
+<br/>
+Vehicle Color : <input type="text" maxlength="50" [pattern]="a-z" name="color" ngModel id="color">
+<br/>
+<input type="submit" [disabled]="!vehicleForm.valid" value="submit">
+</form>
