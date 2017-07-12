@@ -5,7 +5,7 @@ Type : <select ngModel name="type" required>
 <br/>
 Vehicle Registration Number : <input 
     type="text" 
-    ngModel     
+    ngModel
     id="regNumber"        
     name="regNumber">
 <br/>
@@ -15,7 +15,7 @@ Vehicle Photo URL : <input
     id="photo"    
     name="photo">
 <br/>
-Vehicle Color : <input type="text" maxlength="50" pattern="[A-Za-z]"  name="color" ngModel id="color">
+Vehicle Color : <input type="text" maxlength="50" pattern="[A-Za-z]+"  name="color" ngModel id="color">
 <br/>
 <input type="submit" [disabled]="!vehicleForm.valid" value="submit">
 </form>
